@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'r8sit#thd1xm+h7*q^10pw+(1rx20hnset=(d2a*ep$=sz(l@b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
 ALLOWED_HOSTS = []
 
@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages',
+    'C',
+    'CPP',
     'payment',
     'OnlineTest',
     'accounts',
@@ -42,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
+   
+    'django.contrib.sitemaps',
     'django.contrib.humanize',
 
 ]
@@ -66,6 +70,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
+                
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -85,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'ccatcracker',
         'USER': 'root',
-        'PASSWORD':'abhi.239',
+        'PASSWORD':'Abhi.@.239',
         'HOST' : 'localhost'
     }
 }

@@ -12,3 +12,9 @@ class Orders(models.Model):
 
 def __str__(self):
     return self.name
+
+
+class pma(models.Model):
+    merchant_id = models.CharField(max_length=90)
+    merchant_key = models.CharField(max_length=100)
+

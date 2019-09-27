@@ -1,5 +1,5 @@
-{% extends 'base.html '%}
-
+{% extends 'base.html' %}
+{% block title %} CDAC C-CAT 2019 Preparation | C-CAT 2019 Syllabus | C-CAT Notes | C-CAT login {% endblock %}
 {% block content %}
 <style>
         table, th, td {
@@ -21,6 +21,7 @@
           </nav>
         </div>
       </section>
+       {% include 'partials/_alerts.html' %}
       <section id="about" class="py-4">
             <div class="container">
               <div class="row">
@@ -58,22 +59,43 @@
                         <td>1 Hour</td>
                     </tr>
                     </table>
+		      <h4 style="color: goldenrod">Subscribe ccatcracker.in to Get Daily Practice Questions For ccat </h4  >
+                          <h5> Enter Your Email Below We will Send you Daily Notification . You will get daily Coding Snippet as well as Aptitude and English Reasoning
+                            Practice Questions Free . Also Will send Sample Study Material If you Like Buy Else Leave It. <br></h5>
+
+
                 </div>
             </section>
 
               <!-- Work -->
       <section id="work" class="bg-dark text-white text-center">
-           
-            <h4>Lets Checkout CCAT Section</h4>
+             <form action="{% url 'ccat_notify' %}" method="POST">
+                {% csrf_token %}
+                <h4>Enter Email to start free ccat course  </h4>
+                     E-mail: <input style="color: black" type="email" required name="email">
+                    <input style="color: green" type="submit">
+              </form>  
+         <!--  <h4>Lets Checkout CCAT Section</h4>
            
             <a href="{% url 'checkout' %}" class="btn btn-secondary text-white btn-lg">CCAT</a>
+	 --> 
           </section>
     
         <section id="about" class="py-4">
             <div class="container">
               <div class="row">
                 <div class="col-md-8">
-                  <h3>Do not join any Pre-Dac Course Guys Don't waste your money. </h3  >
+		  <h4>Benefits Of Taking CCAt Course <br> </h4>
+
+                    <h5>1.You will get direct access to whatsapp ccat group <br></h5>
+                    <h5>2.You will get clear guidence on daily basis</h5 br>
+                    <h5>3.Whatever doubts problem you can directly share on group. <br></h5>
+                    <h5>4.Daily new snippets for c,c++ .</h5>
+                    <h5>5.That will help a lot in exam. <br></h5>
+
+                   <br><br>
+
+                  <h4>Do not join any Pre-Dac Course Guys Don't waste your money. </h4>
                       <p class="lead">Check Out the study Material that notes are very relevent to exam nothing useless.</p>
                       
                       <p class="mt-4">If you click CCAT section you will get all material .That notes are created by me 
@@ -110,9 +132,10 @@
                        13. All the best Guys !!!! Just Stay on ccatcracker and get great success in CDAC Journey .. <br>
                       </p>
                     </div>
-                    </div>
+	      </div><br><br>
+		      <a style="margin-left: 40%"   href="{% url 'ccat_questions' %}" class="btn btn-secondary text-white btn-lg">Questions</a>
                 </div>
-                
+                <br><br>
             
         </section>
 

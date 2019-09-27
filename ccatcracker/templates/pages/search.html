@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% block title %} cdac ccat 2019 notes {% endblock %}
 {% load humanize %}
 
 {% block content %}
@@ -17,8 +17,10 @@
                     <div class="card-body">
                       <div class="listing-heading text-center">
                         <h4 class="text-primary">{{list.course}}</h4>
+			 <h4 class="text-primary">{{list.center_name}}</h4>
+
                         <p>
-                          <i class="fas fa-map-marker text-secondary"></i>  ss{{list.city}},
+                          <i class="fas fa-map-marker text-secondary"></i>  {{list.city}},
                           {{list.address}}
                         </p>
                         <p>
@@ -40,4 +42,6 @@
               </div>
               {% endif %}
             </section>  
+
+
 {% endblock %}

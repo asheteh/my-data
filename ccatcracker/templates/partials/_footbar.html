@@ -10,12 +10,12 @@
           <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
               <h5>Quick links</h5>
-              <ul class="list-unstyled quick-links">
-                <li href><i class="fa fa-angle-double-right"></i>Home</a></li>
-                <li><i class="fa fa-angle-double-right"></i>About</a></li>
-                <li><i class="fa fa-angle-double-right"></i>CCAT</a></li>
-                <li><i class="fa fa-angle-double-right"></i>CDAC</a></li>
-                <li><i class="fa fa-angle-double-right"></i>Test</a></li>
+	      <ul class="list-unstyled quick-links" >
+		<li><a href="{% url 'index' %}" style="color: white">Home</a></li>    
+                 <li><a href="{% url 'ccat' %}" style="color: white">CCAT</a></li>
+                 <li><a href="{% url 'cdac' %}" style="color: white">CDAC</a></li>
+		 <li><a href="{% url 'ccee' %}" style="color: white">ccee</a></li>
+		   <li><a href="{% url 'test' %}" style="color: white">Test</a></li>
               </ul>
             </div>
           </div>
