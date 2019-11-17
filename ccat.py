@@ -30,7 +30,7 @@ def sendmail(record):
     email_password = 'GeTx!As7'
     email_send = record[1]
     print(email_send)
-    subject = 'Todays Aptitude Question Train New Topic '
+    subject = 'Last Message'
     
     msg = MIMEMultipart()
     msg['From'] = email_user
@@ -40,13 +40,14 @@ def sendmail(record):
 
     body = '''
             Hi there ,
-            Click http://ccatcracker.in
-            go to ccat section
-            and solve latest apti question 
-            on Train 
-            Dont miss any single question .
-            let me know if you have 
-            any doubts.
+            As we got response from 2,3
+            peoples because of daily mail
+            its disturbing . So we have 
+            decided to not send any mail 
+            Daily 5 questions very imp 
+            we will update in ccat section 
+            so dont forget to check questions.
+
 
             Thanks,
             ccatcracker
