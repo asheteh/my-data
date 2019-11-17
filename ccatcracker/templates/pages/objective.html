@@ -47,19 +47,18 @@
    <div class="container">
       <div class="row">
          <div class="col-md-8">
-            <a href="{% url 'C-CPP-Programming-Questions' %}" class="btn btn-secondary text-white btn-lg" style="margin-left: 450px;">CDAC Progamming Qustions</a>
-            <h4> Aptitude Question <br> <br> </h4>
+         <h4> Section B Question <br> <br> </h4>
             {% if listings %}
      
       
             {% for list in listings %}
-           
+
             <table class="bix-tbl-container" cellspacing="0" cellpadding="0" border="0" width="100%">
             <tbody>
                <tr>
                   <td class="bix-td-qno" rowspan="2" valign="top" align="left" > {{list.qno}}.&nbsp;&nbsp;&nbsp;</td>
                   <td class="bix-td-qtxt" valign="top">
-                     <p>{{list.apti_q}}
+                  <span style="color:brown;">{{list.question|linebreaks}}</span>
                   </td>
                </tr>
                <tr>
@@ -68,19 +67,19 @@
                         <tbody>
                            <tr>
                               <td  style="padding-top: .40em;" width="1%" ><a id="lnkOptionLink_A_434" href="javascript: void 0;">A.</a></td> 
-                              <td  style="padding-top: .40em;" width="99%" id="tdOptionDt_A_434">&nbsp;&nbsp;{{list.A}}</td>
+                              <td  style="padding-top: .40em;" width="99%" id="tdOptionDt_A_434">&nbsp;&nbsp;{{list.a}}</td>
                            </tr>
                            <tr>
                               <td  style="padding-top: .2em;" width="1%" id="tdOptionNo_B_434"><a id="lnkOptionLink_B_434" href="javascript: void 0;">B.</a></td>
-                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_B_434">&nbsp;&nbsp;{{list.B}}</td>
+                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_B_434">&nbsp;&nbsp;{{list.b}}</td>
                            </tr>
                            <tr>
                               <td  style="padding-top: .40em;" width="1%" id="tdOptionNo_C_434"><a id="lnkOptionLink_C_434" href="javascript: void 0;">C.</a></td>
-                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_C_434">&nbsp;&nbsp;{{list.C}}</td>
+                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_C_434">&nbsp;&nbsp;{{list.c}}</td>
                            </tr>
                            <tr>
                               <td  style="padding-top: .40em;" width="1%" id="tdOptionNo_D_434"><a id="lnkOptionLink_D_434" href="javascript: void 0;">D.</a></td>
-                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_D_434">&nbsp;&nbsp;{{list.D}}</td>
+                              <td  style=" padding-top: .5em;" width="99%" id="tdOptionDt_D_434">&nbsp;&nbsp;{{list.d}}</td>
                            </tr> <br>
                            <tr> 
                              <td style=" padding-top: .40em;" width="1%"> <br> 
@@ -93,19 +92,20 @@
                   </tr>
                 </tbody>
               </table>
-              <pre style="margin-left: 35px;
+              <pre style="margin-left: 50px;
+           
               border: 1px dashed #93b7d5;
               background-color: #f8f8f8;
               padding: 10px;
               width: auto;
               margin-top: 10px;
               margin-bottom: 10px;
-             
-              "
-              >
-                  {{list.ans|linebreaks}}
+              ">
+                  {{list.ans|linebreaks}}</span>
               </pre>
-            
+           
+                  
+                  
                {% endfor %}
                {% endif %}
 

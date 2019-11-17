@@ -40,5 +40,7 @@ urlpatterns = [
     path('dac_interview',views.dac_interview,name='dac_interview'),
     path('big_data_interview',views.bd_interview,name='big_data_interview'),
     path('Aptitude-Tutorial',views.apti,name='Aptitude-Tutorial'),
+    path('C-CPP-Objective-Questions',views.section_b,name='C-CPP-Objective-Questions'),
+    path('C-CPP-Programming-Questions',views.coding,name='C-CPP-Programming-Questions'),
 ]
  

@@ -21,22 +21,22 @@
 </section>
 <section id="bc" class="mt-3">
    <div class="container">
-	 <div class="breadcrumb">
+      <div class="breadcrumb">
          <a href="{% url 'index' %}"> Home</a> <span style="color: green;">»</span> <a href="{% url 'test' %}"> Online Test</a> <span style="color: green;">»</span> <a href="{% url 'test' %}">CCAT-Test Section-A+B</a> <span style="color: green;">» Section A+B Test - Random</span> <span id="timers" style="color: red; padding-left: 15px;">Time Left: <b id="timer"></b></span> 
          
         
        
     </div>
-
    </div>
 </section>
+
 
 <section id="about" class="py-4">
    <div class="container">
    <div class="row">
    <div class="col-md-8">
   <br> <br>
-  
+   <h4 style="margin-left: 30%">Solve Question in :</h4>
    {% if listings %}
    {% for list in listings %}
    
